@@ -1,3 +1,7 @@
+#include "uart.h"
+#include "register.h"
+
+
 int main(void)
 {
     init_hardware();
