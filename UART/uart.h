@@ -1,3 +1,14 @@
+/*
+File:uart.h
+
+Author:Kaan Acar
+*/
+
+#include<stdint.h>
+#include"common_defines.h"
+
+
+
 void init_hardware(void);
 void init_clock(void);
 void init_timer(void);
