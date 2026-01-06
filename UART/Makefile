@@ -25,3 +25,8 @@ startup.o: startup.c
 
 bare_metal_uart.elf: main.o common_defines.o uart.o startup.o
 	$(CC) $(LDFLAGS) -o $@ $^
+load:
+	openocd \
+	-f /usr/local/xpack-openocd-0.12.0-1/openocd/scripts/interface/stlink.cfg \
+	-f /usr/local/xpack-openocd-0.12.0-1/openocd/scripts/target/stm32f1x.cfg \
+	-c "program build/bare_metal_uart.elf verify reset exit"
